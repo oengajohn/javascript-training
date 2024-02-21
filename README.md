@@ -248,3 +248,122 @@ let area = Math.PI * radius ** 2; // PIr2 === PI*r*r
 
 console.log(area);
 ```
+
+## Comparisons
+
+### Greater than Sign `>` 
+```javascript
+let a = 10;
+let b = 20;
+
+let result = a > b;
+
+console.log(result); //false
+
+let c = 50;
+let result2 = c > b;
+console.log(result2); // true
+```
+### less than Sign `< `
+```javascript
+
+let a = 10;
+let b = 20;
+
+let result = a < b;
+
+console.log(result); //true
+
+let c = 50;
+let result2 = c < b;
+console.log(result2); //false
+
+```
+### less than or equal to Sign `<=`
+```javascript
+
+let a = 10;
+let b = 10;
+
+let result = a <= b;
+
+console.log(result); //true
+
+let c = 50;
+let result2 = c <= b;
+console.log(result2); //false
+```
+### greater than or equal to Sign `>=`
+
+```javascript
+let a = 10;
+let b = 10;
+
+let result = a >= b;
+
+console.log(result); //true
+
+let c = 50;
+let result2 = c >= b;
+console.log(result2); //true
+
+
+
+```
+### Equals and Equality Sign `==` vs `===`
+
+```javascript
+let a = 10;
+let b = "10";
+
+let result = a == b; //equals  checks on the content
+
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof result);
+console.log(result)//true;
+
+let result2 = a === b; //equality => checks the type of variable and content
+
+console.log(typeof result2);
+console.log(result2)//false;
+
+
+
+```
+### Equals and Equality Sign `!=` vs `!==`
+
+```javascript
+
+let a = 10;
+let b = "10";
+
+let result = a != b; //equals 
+
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof result);
+console.log(result);//false
+
+let result2 = a !== b; //equality => checks the type of variable and value
+
+console.log(typeof result2);
+console.log(result2);//true
+
+
+```
+
+### Bonus
+```javascript
+let a ='Z' // 90
+let b ='A' //65
+
+let result = a > b
+console.log(typeof a);
+
+console.log(result); //true
+
+let str1 = "Glow"
+let str2 = "Glee"
+console.log(str1 > str2);//true
+```
