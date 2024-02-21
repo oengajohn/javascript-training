@@ -367,3 +367,8 @@ let str1 = "Glow"
 let str2 = "Glee"
 console.log(str1 > str2);//true
 ```
+
+## Conditions
+## logical Operators
+## Loops
+## Switch statement
