@@ -101,6 +101,64 @@ console.log(typeof student);
 
 ## Interaction with alert, confirm, prompt
 ```javascript
+// interaction with alert, confirm, prompt
+
+// alert("Hello, your door bell is not working")
+/* let isBoss = confirm("Is Musili in class?")
+console.log(isBoss); */
+
+let ageString = prompt("What is your age?")
+console.log(typeof ageString);
+console.log( ageString);
+
+
 
 ```
+
+## Data Conversions
+
+```javascript
+let ageString = prompt("What is your age?")
+console.log(typeof ageString);
+//number
+let age = Number(ageString);
+console.log(typeof age)
+console.log( age)
+
+// let isBoss = confirm("Is your boss?");
+// console.log(typeof isBoss);
+
+let myAgeIs = `My Age is ${age}`;
+
+let isAgeSet = Boolean(myAgeIs);
+console.log(myAgeIs);
+
+console.log(typeof isAgeSet) // number
+console.log( isAgeSet)
+
+let myAgeIs2 = '';
+console.log(myAgeIs2);
+let isAgeSet2 = Boolean(myAgeIs2); 
+console.log(typeof isAgeSet2);
+console.log(isAgeSet2); // false
+
+alert("6" / "2") // 3
+
+let ageTwoSTring = String(age)
+console.log(typeof ageTwoSTring) //string
+console.log( ageTwoSTring)
+
+let test= null;
+let test2= undefined;
+
+let numberOne = Number(test); // 0
+console.log(typeof numberOne);
+console.log(numberOne);
+
+
+let numberTwo = Number(test2); //undefined
+console.log(typeof numberTwo);
+console.log(numberTwo); //NaN
+```
+
 
