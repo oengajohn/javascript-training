@@ -161,4 +161,90 @@ console.log(typeof numberTwo);
 console.log(numberTwo); //NaN
 ```
 
+## Operators and Math
 
+```javascript
+
+function sum(a,b) {
+    console.log(a);
+    console.log(b);
+    return a +b;
+}
+
+let a = 10;
+// a = -a // unary negation operator
+
+let b = 25
+let result = a - b; // binary (minus) operator
+console.log(result);
+
+```
+
+## math Operators
+```javascript
+// Addition Operator
+let a = 10;
+let b = 15;
+
+let result = a + b; //binary plus 
+
+console.log(result);//25
+
+let c = -10;
+
+console.log(-c);// 10
+
+// - * - = +
+// + * + = +
+// + * - = -
+
+
+// Subtraction
+let result2 = b-c; // 15 -- 10
+console.log(result2); // 25
+
+
+// Multiplication
+
+let result3 = b * a;
+
+console.log(result3);// 150
+
+let result4 = a * "3";
+
+console.log(typeof result4);
+
+console.log(result4); // 30
+
+let result5 = "3" * a;
+console.log(typeof result5);
+console.log(result5); // 30
+
+// Division
+
+let months = 99;
+let interval = 12;
+
+let noOfYears = months / interval
+console.log(parseFloat(interval));//12
+
+console.log(typeof noOfYears);
+console.log( noOfYears);// 8.25
+console.log(parseInt(noOfYears));// 8
+console.log(parseFloat("85.63")); // 85.63
+
+
+
+// Remainder operator
+
+let ageRemainder = months % interval;
+console.log(ageRemainder); // 3
+
+// Exponential operator 
+let radius = 5
+
+console.log(Math.PI);
+let area = Math.PI * radius ** 2; // PIr2 === PI*r*r
+
+console.log(area);
+```
