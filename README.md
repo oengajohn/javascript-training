@@ -372,3 +372,137 @@ console.log(str1 > str2);//true
 ## logical Operators
 ## Loops
 ## Switch statement
+
+
+## Functions
+
+```javascript
+//function declaration and implementation
+function sayHello() {
+    console.log("just greetings");
+}
+
+function sayHelloWithMessage(message = "just greetings 2") {
+  console.log(message);
+}
+
+sayHello()
+sayHelloWithMessage(undefined)
+sayHelloWithMessage(null)
+sayHelloWithMessage("test")
+let username = 'John'; //global variable
+function showMessage(){
+    // local variable
+    let message  = 'Hello, '+username;
+    username = 'Bob'
+    console.log(message);
+}
+showMessage()
+console.log(username);
+
+```
+### Variable scopes
+```javascript
+let username = 'John'; //global variable
+function showMessage(){
+    // local variable
+    let username = "Jane"
+    let message  = 'Hello, '+username;
+    username = 'Bob'
+    console.log(message);
+}
+showMessage()
+console.log(username); // John
+```
+
+### functions that return
+```javascript
+function add(a, b){
+  return a + b;
+}
+
+let result  = add(45,78)
+
+console.log(result);
+console.log(add(45, 120));
+
+function doesContain(text,key) {
+    let data = String(text)
+    return data.includes(key);
+}
+console.dir(doesContain);
+console.log(doesContain("It is a new day, let's learn javascript", "lets"))
+
+function messageWithDefaultParameter(text = "dred") {
+    if(text === undefined){
+        text = "default Value"
+    }
+  console.log("Hello, "+text);
+}
+messageWithDefaultParameter()
+messageWithDefaultParameter("My new message")
+
+function doQualifyForId(age){
+    console.log(typeof age);
+    age = Number(age)
+    console.log(typeof age);
+    console.log(age);
+    if(age < 18){
+        return false;
+    }
+    return true;
+}
+
+console.log(doQualifyForId("45t")); // 45 true
+```
+## Arrow functions
+
+### Functions that don't return values
+```javascript
+// Arrow functions
+let username = 'John'; //global variable
+let showMessage = () => {
+  // local variable
+  let message = "Hello, " + username;
+  username = "Bob";
+  console.log(message);
+};
+
+showMessage();
+console.log(username);
+```
+### Functions with defaulted value parameters
+```javascript
+let sayHelloWithMessage = (message = "just greetings 2") => console.log(message);
+
+sayHelloWithMessage(undefined);
+sayHelloWithMessage(null);
+sayHelloWithMessage("test");
+```
+### Functions with defaulted value parameters
+```javascript
+let add = (a,b) => a + b;
+let subtract = (a,b) => a - b;
+console.log(add(45,89));
+```
+
+### Functions that return other functions as values
+```javascript
+
+let age  = prompt("What is your age?");
+
+// let welcome = age < 18 ? () => alert("Hello") : () => alert("Greetings!");
+
+function welcome2(){
+    if(age <18){
+        return function(){
+           return alert("Hello");
+        }
+    }
+    return function(){
+        return alert("Greetings!");
+    }
+}
+
+welcome2()();
+```
