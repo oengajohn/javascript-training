@@ -506,3 +506,75 @@ function welcome2(){
 
 welcome2()();
 ```
+
+## Objects
+
+```javascript
+// Objects
+// defining an object
+let student = new Object();
+let studentTwo = {};
+
+
+student.name = "Teresa";
+console.log(student.name);
+
+let studentThree = {
+  name: "John",
+  age: 24,
+  "student no": 1,
+  print:function (){
+    console.log("Hello, "+ this.name);
+  },
+  address:{
+    lat: -10.2569854556,
+    lng: 4.589632445
+  }
+};
+
+// set values by key
+studentThree["student no"]=89;
+
+console.log(studentThree);
+
+//get values by key
+console.log(studentThree.name);
+console.log(studentThree.age);
+console.log(studentThree["student no"]);
+studentThree.print()
+console.log(studentThree.address.lat);
+console.log(studentThree.address.lng);
+
+//removing properties 
+delete studentThree.age;
+
+console.log(studentThree);
+
+let studentFour = {
+  name: "Paul",
+  age: 20,
+  "student no": 3,
+  print: function () {
+    console.log("Hello, " + this.name);
+  },
+};
+let studentFive = null;
+
+// null coalescing -> error silencing operator
+console.log(studentFour.address?.lat);
+console.log(studentThree.address?.lat);
+// console.log(studentFive.address?.lat); // is not ideal on the first object
+
+// Check if property exists in an object
+console.log("address" in studentFour); // false
+console.log("address" in studentThree); // true
+console.dir(studentThree);
+console.log(Object.hasOwnProperty.call(studentThree, "age")); // false
+console.log("-------------------");
+// extract all keys
+for (const key in studentThree) {
+    console.log(key);
+    console.log(studentThree[key]);
+}
+
+```
